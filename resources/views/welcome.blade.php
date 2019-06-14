@@ -9,13 +9,13 @@
         <title>Laravel</title>
  
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="{{mix('css/app.css')}}" rel="stylesheet" >
     </head>
     <body>
     <div id="app">
             <!-- 加入vue组件 -->
             <example-component></example-component>
         </div>
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{mix('js/app.js') }}"></script>
     </body>
 </html>
