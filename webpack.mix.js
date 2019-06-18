@@ -1,5 +1,5 @@
 let mix = require('laravel-mix');
-
+const path = require('path');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,5 +11,56 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.webpackConfig({
+    output: {
+      publicPath: "/",
+      chunkFilename: 'js/[name].[chunkhash].js'
+    },
+    resolve: {
+      alias: {
+        'config': 'assets/js/config',
+        'lang': 'assets/js/lang',
+        'plugins': 'assets/js/plugins',
+        // 'vendor': 'assets/js/vendor',
+        'dashboard': 'assets/js/dashboard',
+        'home': 'assets/js/home',
+        'demo': 'assets/js/demo',
+        'js': 'assets/js',
+      },
+      modules: [
+        'node_modules',
+        path.resolve(__dirname, "resources")
+      ]
+    },
+  });
+  mix.options({
+      extractVueStyles: true
+  });
+  
+//   let themes = [
+//     'resources/assets/sass/themes/default-theme.scss',
+//     'resources/assets/sass/themes/gray-theme.scss',
+//   ];
+  
+//   themes.forEach((item) => {
+//     mix.sass(item, 'public/css/themes').version();
+//   })
+  
+  mix.browserSync({
+          proxy: 'https://192.168.1.222:8082',
+          files: [
+              './resources/views/**/*.blade.php',
+              './resources/assets/js/**/*.js',
+              './resources/assets/js/**/*.vue',
+          ]
+  })
+  .js('resources/assets/js/app.js', 'public/js')
+  .sass('resources/assets/sass/app.scss', 'public/css')
+//   .js('resources/assets/js/home.js', 'public/js')
+//   .sass('resources/assets/sass/home.scss', 'public/css')
+//   .js('resources/assets/js/demo.js', 'public/js')
+  .version()
+  ;
+
+// mix.js('resources/assets/js/app.js', 'public/js')
+//    .sass('resources/assets/sass/app.scss', 'public/css');
