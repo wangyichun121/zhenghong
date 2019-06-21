@@ -47,7 +47,7 @@ mix.webpackConfig({
 //   })
   
   mix.browserSync({
-          proxy: 'https://192.168.1.222:8082',
+          proxy: 'http://www.laravel.com',
           files: [
               './resources/views/**/*.blade.php',
               './resources/assets/js/**/*.js',
