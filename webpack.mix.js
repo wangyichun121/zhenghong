@@ -21,7 +21,7 @@ mix.webpackConfig({
         'config': 'assets/js/config',
         'lang': 'assets/js/lang',
         'plugins': 'assets/js/plugins',
-        // 'vendor': 'assets/js/vendor',
+        'vendor': 'assets/js/vendor',
         'dashboard': 'assets/js/dashboard',
         'home': 'assets/js/home',
         'demo': 'assets/js/demo',
@@ -56,9 +56,6 @@ mix.webpackConfig({
   })
   .js('resources/assets/js/app.js', 'public/js')
   .sass('resources/assets/sass/app.scss', 'public/css')
-//   .js('resources/assets/js/home.js', 'public/js')
-//   .sass('resources/assets/sass/home.scss', 'public/css')
-//   .js('resources/assets/js/demo.js', 'public/js')
   .version()
   ;
 
