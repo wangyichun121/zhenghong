@@ -52,6 +52,7 @@ mix.webpackConfig({
               './resources/views/**/*.blade.php',
               './resources/assets/js/**/*.js',
               './resources/assets/js/**/*.vue',
+              './public/css/**/*.css',
           ]
   })
   .js('resources/assets/js/app.js', 'public/js')

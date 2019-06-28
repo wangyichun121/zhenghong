@@ -1,4 +1,55 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+.card-body[data-v-7168fb6a] {
+    overflow:hidden;
+}
+.game-area[data-v-7168fb6a] {
+        margin:auto auto;
+        width:450px;
+        height: 670px;
+        border: 4px solid #BCBCBC;
+        margin-top:50px;
+        padding-left:10px;
+        padding-right:10px;
+        padding-top:10px;
+        /* float: left; */
+        text-align: center;
+        border-radius: 3px;
+        background: #F9F7EE;
+}
+.game-name[data-v-7168fb6a] {
+        font-size:28px;
+        font-weight:900;
+        color:#d0d0d0;
+        width:160px;
+        height: 100px;
+        background: #5979AB;
+        border-radius: 3px;
+        text-align: center;
+        float: left;
+}
+.left-pairs[data-v-7168fb6a] {
+        font-size:24px;
+        color:#E9DFD1;
+        line-height: 26px;
+        width:120px;
+        height: 100px;
+        background: #BAAC9F;
+        border-radius: 3px;
+        float: left;
+        text-align: center;
+        margin-left:10px;
+        padding-top:10px;
+}
+.card-area[data-v-7168fb6a] {
+        width: 100%;
+        height: 510px;
+        /* border: 1px solid #d0d0d0; */
+        float: left;
+        border-radius: 3px;
+        margin-top:20px;
+        background: #FEFEFE;
+}
+/*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
@@ -11650,5 +11701,10 @@ a.text-dark:focus {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.card-default {
+  height: 800px;
+  margin-top: 50px;
 }
 
