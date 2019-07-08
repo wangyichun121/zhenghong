@@ -8,7 +8,32 @@
                         <div class="game-name">Memory Card</div>
                         <div class="left-pairs">Paris Left To Match</div>
                         <div class="left-pairs">Highest Speed</div>
-                        <div class="card-area"></div>
+                        <div class="card-area">
+                            <div>
+                                <span><img :src="imgurl_1" /></span>
+                                <span><img :src="imgurl_9" /></span>
+                                <span><img :src="imgurl_10" /></span>
+                                <span><img :src="imgurl_4" /></span>
+                            </div>
+                            <div>
+                                <span><img :src="imgurl_5" /></span>
+                                <span><img :src="imgurl_6" /></span>
+                                <span><img :src="imgurl_7" /></span>
+                                <span><img :src="imgurl_8" /></span>
+                            </div>
+                            <div>
+                                <span><img :src="imgurl_1" /></span>
+                                <span><img :src="imgurl_9" /></span>
+                                <span><img :src="imgurl_10" /></span>
+                                <span><img :src="imgurl_4" /></span>
+                            </div>
+                             <div>
+                                <span><img :src="imgurl_5" /></span>
+                                <span><img :src="imgurl_6" /></span>
+                                <span><img :src="imgurl_7" /></span>
+                                <span><img :src="imgurl_8" /></span>
+                            </div>
+                        </div>
                     </div>
                     </div>
                 </div>
@@ -19,18 +44,34 @@
 
 <script>
     export default {
-        // mounted() {
-        //     console.log('Component mounted.')
-        // }
         data() {
             return {
+                imgurl_1:'/static/img/8-ball.png',
+                // imgurl_2:'/static/img/1561704783(1).jpg',
+                // imgurl_3:'/static/img/back.png',
+                imgurl_4:'/static/img/baked-potato.png',
+                imgurl_5:'/static/img/dinosaur.png',
+                imgurl_6:'/static/img/kronos.png',
+                imgurl_7:'/static/img/rocket.png',
+                imgurl_8:'/static/img/skinny-unicorn.png',
+                imgurl_9:'/static/img/that-guy.png',
+                imgurl_10:'/static/img/zeppelin.png',
                 radio:1,
             }
+        },
+        methods: {
+
         }
     }
 </script>
 
 <style scoped>
+img {
+    width: 24%;
+
+}
+
+
 
 .card-body {
     overflow:hidden;
@@ -48,6 +89,7 @@
         text-align: center;
         border-radius: 3px;
         background: #F9F7EE;
+        
     }
     .game-name {
         font-size:28px;
@@ -59,6 +101,8 @@
         border-radius: 3px;
         text-align: center;
         float: left;
+        padding-top:10px;
+        line-height: 30px
     }
     .left-pairs {
         font-size:24px;
@@ -76,10 +120,10 @@
     .card-area {
         width: 100%;
         height: 510px;
-        /* border: 1px solid #d0d0d0; */
         float: left;
         border-radius: 3px;
         margin-top:20px;
         background: #FEFEFE;
+        padding-top:10px;
     }
 </style>
